@@ -1,2 +1,129 @@
-hello
-joyboy
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoyBoy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Fullscreen Responsive Background */
+        body {
+            background: url('luffy-l.jpg') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+            min-height: 100vh;
+            width: 100vw;
+            position: relative;
+        }
+
+        /* Heading Styling */
+        #heading {
+            color: white;
+            border-bottom: 3px solid red;
+            padding-bottom: 10px;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            position: absolute;
+            top: 20px; 
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+        }
+
+        /* Buttons Container (Default for Large Screens) */
+        .button-container {
+            position: absolute;
+            top: 50%;
+            left: 15%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        /* Button Styling (No Decoration) */
+        .btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            text-align: left;
+            padding: 10px 0;
+        }
+
+        .btn:hover {
+            text-decoration: underline;
+        }
+
+        /* Medium Screens (Tablets) */
+        @media (max-width: 1024px) {
+            body {
+                background: url('luffy-m.jpg') no-repeat center center;
+                background-size: cover;
+            }
+            .button-container {
+                left: 12%;
+                gap: 25px;
+            }
+            #heading {
+                font-size: 32px;
+            }
+        }
+
+        /* Small Screens (Phones) */
+        @media (max-width: 768px) {
+            body {
+                background: url('luffy-s.jpg') no-repeat center center;
+                background-size: cover;
+            }
+        }
+
+        /* Very Small Screens - Move Buttons to Bottom Center */
+        @media (max-width: 768px) {
+            .button-container {
+                left: 50%;
+                bottom: 25%;
+                transform: translate(-50%, 0);
+                top: auto;
+                display: flex;
+                align-items: center;
+                text-align: center;
+            }
+
+            #heading {
+                font-size: 24px;
+            }
+
+            .btn {
+                font-size: 16px;
+                text-align: center;
+            }
+        }
+        a{
+            text-decoration: none;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 id="heading">JoyBoy</h1>   
+    </header>
+
+    <!-- Buttons (Now move to bottom center in mobile) -->
+    <div class="button-container">
+        <button class="btn"><a href="https://x.com/_xx_shiva_">Twitter(x)</a></button>
+        <button class="btn"><a href="https://t.me/joyboy789456">Telegram</a></button>
+        <button class="btn"><a href="https://t.me/@shivakrishnareddy135">Contact Me</a></button>
+    </div>
+
+</body>
+</html>
